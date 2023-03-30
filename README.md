@@ -17,9 +17,13 @@ https://github.com/Cleudeir/Java_Aula_03
 ## Otimização
 
 Run code and access
+
 Read: GET http://localhost:8080/languages
+
 Create: POST http://localhost:8080/add
+
 Delete: DELETE http://localhost:8080/delete/{id}
+
 Update: PUT http://localhost:8080/update/{id}
 
 ## Resultados
