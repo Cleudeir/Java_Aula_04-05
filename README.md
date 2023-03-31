@@ -22,13 +22,15 @@ Web site: https://cadastro-java-aula-04.vercel.app/
 
 Web api: 
 
-    Read: GET https://cadastro-java-aula-04.vercel.app/languages
+Read: GET https://cadastro-java-aula-04.vercel.app/languages
 
-    Create: POST https://cadastro-java-aula-04.vercel.app/add
+Read: GET https://cadastro-java-aula-04.vercel.app/readbyid
 
-    Delete: DELETE https://cadastro-java-aula-04.vercel.app/delete/{id}
+Create: POST https://cadastro-java-aula-04.vercel.app/add
 
-    Update: PUT https://cadastro-java-aula-04.vercel.app/update/{id}
+Delete: DELETE https://cadastro-java-aula-04.vercel.app/delete/{id}
+
+Update: PUT https://cadastro-java-aula-04.vercel.app/update/{id}
 
 Code git: https://github.com/Cleudeir/Cadastro_Java_Aula_04
 
