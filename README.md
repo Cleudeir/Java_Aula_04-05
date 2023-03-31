@@ -25,15 +25,15 @@ Code git: https://github.com/Cleudeir/Cadastro_Java_Aula_04
 ---------------------------------------------------------------
 Web api: 
 
-Read: GET https://cadastro-java-aula-04.vercel.app/languages
+Read: GET https://cadastro-java-aula-04.vercel.app/api/languages
 
-Read: GET https://cadastro-java-aula-04.vercel.app/readbyid
+Read: GET https://cadastro-java-aula-04.vercel.app/api/readbyid
 
-Create: POST https://cadastro-java-aula-04.vercel.app/add
+Create: POST https://cadastro-java-aula-04.vercel.app/api/add
 
-Delete: DELETE https://cadastro-java-aula-04.vercel.app/delete/{id}
+Delete: DELETE https://cadastro-java-aula-04.vercel.app/api/delete/{id}
 
-Update: PUT https://cadastro-java-aula-04.vercel.app/update/{id}
+Update: PUT https://cadastro-java-aula-04.vercel.app/api/update/{id}
 
 
 
