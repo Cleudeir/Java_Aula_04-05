@@ -2,13 +2,10 @@ package br.com.cleudeir.linguagensapi;
 
 import java.util.List;
 
-import org.apache.catalina.startup.ClassLoaderFactory.Repository;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,10 +33,17 @@ public class Controller {
         return languages;
     }
 
+    @GetMapping(value = "/readbyid/{id}")
+    public Language getLanguages(@PathVariable String id) {
+        Language language = repository.findById(id).get();
+        System.out.println("languages: " + language);
+        return language;
+    }
+
     @PostMapping(value = "/add")
-    public ResponseEntity<String> postAdd(@RequestBody String newLanguage) {
+    public ResponseEntity<String> postAdd(@RequestBody Language newLanguage) {
         System.out.println("newLanguage" + newLanguage);
-        // repository.save(newLanguage);
+        repository.save(newLanguage);
         return ResponseEntity.status(201).build();
     }
 
