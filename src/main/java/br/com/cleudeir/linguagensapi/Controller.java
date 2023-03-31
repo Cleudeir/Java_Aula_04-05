@@ -32,13 +32,14 @@ public class Controller {
     @GetMapping(value = "/languages")
     public List<Language> getLanguages() {
         List<Language> languages = repository.findAll(Sort.by(Direction.ASC, "ranking"));
+        System.out.println("languages: " + languages);
         return languages;
     }
 
     @PostMapping(value = "/add")
-    public ResponseEntity<String> postAdd(@RequestBody Language newLanguage) {
+    public ResponseEntity<String> postAdd(@RequestBody String newLanguage) {
         System.out.println("newLanguage" + newLanguage);
-        repository.save(newLanguage);
+        // repository.save(newLanguage);
         return ResponseEntity.status(201).build();
     }
 
@@ -57,7 +58,15 @@ public class Controller {
 
     @DeleteMapping(value = "/delete/{id}")
     public ResponseEntity<String> deleteUpdate(@PathVariable String id) {
-        repository.deleteById(id);
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        try {
+            if (!repository.findById(id).isPresent()) {
+                throw new IllegalStateException("Id not found");
+            }
+            repository.deleteById(id);
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 }

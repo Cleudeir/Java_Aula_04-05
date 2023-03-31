@@ -9,5 +9,4 @@ public class LanguagesApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LanguagesApiApplication.class, args);
 	}
-
 }
