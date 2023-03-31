@@ -20,9 +20,13 @@ Create Nextjs Front-End
 
 !NOTA : Only works when running local java server
 
+Web site: https://cadastro-java-aula-04.vercel.app/
+
+Web api: https://cadastro-java-aula-04.vercel.app/api/
+
 Code git: https://github.com/Cleudeir/Cadastro_Java_Aula_04
 
-Web site: https://cadastro-java-aula-04.vercel.app/
+
 
 ![](https://raw.githubusercontent.com/Cleudeir/Java_Aula_04/main/src/main/java/br/com/cleudeir/linguagensapi/images/img1.png)
 
@@ -32,13 +36,13 @@ Web site: https://cadastro-java-aula-04.vercel.app/
 
 Run code local
 
-Read: GET http://localhost:8080/languages
+Read: GET https://cadastro-java-aula-04.vercel.app/languages
 
-Create: POST http://localhost:8080/add
+Create: POST https://cadastro-java-aula-04.vercel.app/add
 
-Delete: DELETE http://localhost:8080/delete/{id}
+Delete: DELETE https://cadastro-java-aula-04.vercel.app/delete/{id}
 
-Update: PUT http://localhost:8080/update/{id}
+Update: PUT https://cadastro-java-aula-04.vercel.app/update/{id}
 
 ## Imersão Alura Aula Posterior
 
